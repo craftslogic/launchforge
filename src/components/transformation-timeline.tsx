@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Lightbulb, Search, Crosshair, PenTool, Globe, Rocket, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -65,6 +65,15 @@ export default function TransformationTimeline() {
 
 function TimelineItem({ stage, isEven, index }: { stage: any, isEven: boolean, index: number }) {
   const itemRef = useRef<HTMLDivElement>(null);
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    setIsDesktop(window.innerWidth > 768);
+    const handleResize = () => setIsDesktop(window.innerWidth > 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: itemRef,
     offset: ["start 80%", "center center"],
@@ -93,7 +102,7 @@ function TimelineItem({ stage, isEven, index }: { stage: any, isEven: boolean, i
 
       {/* Content Card */}
       <motion.div 
-        style={{ x: window.innerWidth > 768 ? x : 0 }}
+        style={{ x: isDesktop ? x : 0 }}
         className={cn(
           "w-full md:w-1/2 pl-28 md:pl-0",
           isEven ? "md:pr-20 text-left md:text-right" : "md:pl-20 text-left"
