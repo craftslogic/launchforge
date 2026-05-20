@@ -2,10 +2,53 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send } from "lucide-react";
+import { Send, Loader2, CheckCircle, AlertCircle } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
   const [focused, setFocused] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    idea: "",
+    industry: "",
+    challenge: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus("idle");
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID",
+        {
+          from_name: formData.name,
+          reply_to: formData.email,
+          idea: formData.idea,
+          industry: formData.industry,
+          challenge: formData.challenge,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY"
+      );
+      setStatus("success");
+      setFormData({ name: "", email: "", idea: "", industry: "", challenge: "" });
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      setStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const fields = [
     { id: "name", label: "Your Name", type: "text" },
@@ -30,7 +73,7 @@ export default function ContactForm() {
         >
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-[2.5rem] pointer-events-none" />
           
-          <form className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8" onSubmit={(e) => e.preventDefault()}>
+          <form className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8" onSubmit={handleSubmit}>
             {fields.map((field) => (
               <div key={field.id} className={`relative ${field.id === 'idea' ? 'md:col-span-2' : ''}`}>
                 <label 
@@ -42,11 +85,15 @@ export default function ContactForm() {
                 </label>
                 <input
                   type={field.type}
+                  name={field.id}
+                  value={formData[field.id as keyof typeof formData]}
+                  onChange={handleChange}
                   onFocus={() => setFocused(field.id)}
                   onBlur={(e) => {
                     if (!e.target.value) setFocused(null);
                   }}
                   className="w-full bg-black/20 border-b border-white/10 px-4 py-4 text-foreground focus:outline-none focus:border-primary transition-colors rounded-t-xl"
+                  required
                 />
               </div>
             ))}
@@ -60,19 +107,46 @@ export default function ContactForm() {
                   Biggest Challenge Right Now
                 </label>
               <textarea
+                name="challenge"
+                value={formData.challenge}
+                onChange={handleChange}
                 onFocus={() => setFocused('challenge')}
                 onBlur={(e) => {
                   if (!e.target.value) setFocused(null);
                 }}
                 className="w-full bg-black/20 border-b border-white/10 px-4 py-4 text-foreground focus:outline-none focus:border-primary transition-colors rounded-t-xl h-32 resize-none"
+                required
               ></textarea>
             </div>
 
             <div className="md:col-span-2 mt-8">
-              <button className="group relative w-full flex items-center justify-center gap-2 rounded-xl bg-foreground px-8 py-5 text-background font-semibold transition-all hover:bg-white hover:scale-[1.01]">
-                Analyze My Startup Idea
-                <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                <div className="absolute inset-0 rounded-xl ring-2 ring-foreground/20 ring-offset-2 ring-offset-background opacity-0 group-hover:opacity-100 transition-opacity" />
+              <button 
+                type="submit"
+                disabled={isSubmitting}
+                className="group relative w-full flex items-center justify-center gap-2 rounded-xl bg-foreground px-8 py-5 text-background font-semibold transition-all hover:bg-white hover:scale-[1.01] disabled:opacity-70 disabled:hover:scale-100"
+              >
+                {isSubmitting ? (
+                  <>
+                    Processing...
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  </>
+                ) : status === "success" ? (
+                  <>
+                    Message Sent Successfully
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                  </>
+                ) : status === "error" ? (
+                  <>
+                    Failed to Send (Try Again)
+                    <AlertCircle className="w-4 h-4 text-red-500" />
+                  </>
+                ) : (
+                  <>
+                    Analyze My Startup Idea
+                    <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </>
+                )}
+                <div className="absolute inset-0 rounded-xl ring-2 ring-foreground/20 ring-offset-2 ring-offset-background opacity-0 group-hover:opacity-100 transition-opacity disabled:hidden" />
               </button>
             </div>
           </form>
