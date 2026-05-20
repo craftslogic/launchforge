@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Sparkles } from "lucide-react";
+import Image from "next/image";
 
 const TwitterIcon = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -29,13 +29,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-2 group mb-6 inline-flex">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center relative overflow-hidden">
-                <Sparkles className="w-4 h-4 text-white z-10" />
-              </div>
-              <span className="font-heading font-semibold text-xl tracking-wide text-foreground">
-                Buildoc
-              </span>
+            <Link href="/" className="flex items-center mb-6 inline-flex group">
+              <Image
+                src="/logo.png"
+                alt="Buildoc"
+                width={130}
+                height={44}
+                className="h-10 w-auto object-contain"
+              />
             </Link>
             <p className="text-muted max-w-sm text-balance">
               Transforming raw business ideas into launch-ready brands through research, strategy, and cinematic execution.

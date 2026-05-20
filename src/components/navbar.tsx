@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -41,14 +41,15 @@ export default function Navbar() {
           : "bg-transparent px-2 py-2"
       )}>
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center relative overflow-hidden">
-            <Sparkles className="w-4 h-4 text-white z-10" />
-            <div className="absolute inset-0 bg-white/20 blur-xl group-hover:scale-150 transition-transform duration-500" />
-          </div>
-          <span className="font-heading font-semibold text-xl tracking-wide text-foreground">
-            Buildoc
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Image
+            src="/logo.png"
+            alt="Buildoc"
+            width={120}
+            height={40}
+            className="h-9 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Links */}
