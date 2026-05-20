@@ -34,7 +34,7 @@ export default function Footer() {
                 <Sparkles className="w-4 h-4 text-white z-10" />
               </div>
               <span className="font-heading font-semibold text-xl tracking-wide text-foreground">
-                LaunchForge
+                Buildoc
               </span>
             </Link>
             <p className="text-muted max-w-sm text-balance">
@@ -73,11 +73,14 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted">
-            &copy; {new Date().getFullYear()} LaunchForge. All rights reserved.
+            &copy; {new Date().getFullYear()} Buildoc. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <Link href="#" className="text-sm text-muted hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-sm text-muted hover:text-white transition-colors">Terms of Service</Link>
+          <div className="flex items-center gap-6 flex-wrap justify-center">
+            <Link href="/privacy-policy" className="text-sm text-muted hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="text-sm text-muted hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/refund-policy" className="text-sm text-muted hover:text-white transition-colors">Refund Policy</Link>
+            <Link href="/cookie-policy" className="text-sm text-muted hover:text-white transition-colors">Cookie Policy</Link>
+            <Link href="/disclaimer" className="text-sm text-muted hover:text-white transition-colors">Disclaimer</Link>
           </div>
         </div>
       </div>

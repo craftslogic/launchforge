@@ -60,7 +60,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-lg md:text-xl text-muted max-w-2xl mb-12 text-balance"
         >
-          LaunchForge transforms raw business ideas into launch-ready brands through research, branding, strategy, and cinematic execution.
+          Buildoc transforms raw business ideas into launch-ready brands through research, branding, strategy, and cinematic execution.
         </motion.p>
 
         <motion.div 

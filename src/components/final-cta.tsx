@@ -33,7 +33,7 @@ export default function FinalCta() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl md:text-2xl text-muted max-w-2xl mx-auto mb-12"
         >
-          LaunchForge helps founders transform ideas into launch-ready startups. Stop doubting. Start building.
+          Buildoc helps founders transform ideas into launch-ready startups. Stop doubting. Start building.
         </motion.p>
 
         <motion.div 

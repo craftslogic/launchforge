@@ -5,7 +5,7 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "LaunchForge didn't just build our app, they architected a brand that made investors take us seriously from day one. We raised $2M within a month of launch.",
+    quote: "Buildoc didn't just build our app, they architected a brand that made investors take us seriously from day one. We raised $2M within a month of launch.",
     author: "Sarah Jenkins",
     role: "Founder, Nova AI",
     avatar: "S"

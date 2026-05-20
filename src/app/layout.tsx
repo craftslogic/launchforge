@@ -5,8 +5,8 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "LaunchForge | Idea-to-Business Launch Operating System",
-  description: "Turn Your Startup Idea Into a Real Business. LaunchForge transforms raw business ideas into launch-ready brands through research, branding, strategy, and execution.",
+  title: "Buildoc | Idea-to-Business Launch Operating System",
+  description: "Turn Your Startup Idea Into a Real Business. Buildoc transforms raw business ideas into launch-ready brands through research, branding, strategy, and execution.",
 };
 
 export default function RootLayout({

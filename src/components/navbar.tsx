@@ -47,7 +47,7 @@ export default function Navbar() {
             <div className="absolute inset-0 bg-white/20 blur-xl group-hover:scale-150 transition-transform duration-500" />
           </div>
           <span className="font-heading font-semibold text-xl tracking-wide text-foreground">
-            LaunchForge
+            Buildoc
           </span>
         </Link>
 

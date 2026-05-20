@@ -1,0 +1,191 @@
+# BUILDOC — WEBSITE POLICIES & LEGAL STRUCTURE
+
+## PRIVACY POLICY
+
+Effective Date: January 1, 2026
+
+At Buildoc, protecting user privacy and maintaining trust is one of our highest priorities. This Privacy Policy explains how Buildoc collects, uses, stores, processes, and safeguards information when users access our platform, services, systems, and digital infrastructure.
+
+Buildoc operates as a business launch and startup development platform that helps founders transform ideas into launch-ready businesses through market validation, competitor research, branding systems, launch infrastructure, and growth-focused execution.
+
+To provide these services effectively, Buildoc may collect certain personal, business, and technical information from users interacting with the platform. Information collected may include names, email addresses, business concepts, company details, billing information, project-related information, website URLs, communication records, analytics data, and technical device information.
+
+Technical information may include browser type, IP address, operating system, referral sources, interaction behavior, session activity, and general platform usage patterns.
+
+This information is used to improve user experience, provide services, process payments, improve platform functionality, enhance operational performance, maintain security, and optimize strategic recommendations.
+
+Buildoc may use third-party infrastructure and operational providers including payment processors, analytics systems, cloud hosting providers, communication systems, authentication systems, scheduling platforms, and email providers.
+
+Our platform may utilize cookies, analytics tools, and tracking technologies to improve platform performance, monitor operational analytics, personalize experiences, and enhance security systems.
+
+Buildoc implements commercially reasonable security measures designed to protect user information and operational systems. These measures may include encrypted connections, authentication layers, infrastructure protections, restricted access systems, monitoring tools, and cloud security practices.
+
+Users may request access, correction, or deletion of their information where applicable under operational and legal limitations.
+
+Buildoc does not sell personal information to third parties. Information may only be shared where necessary for operational functionality, legal compliance, infrastructure services, fraud prevention, or service delivery.
+
+By using the Buildoc platform, users acknowledge and agree to this Privacy Policy.
+
+---
+
+## TERMS OF SERVICE
+
+Effective Date: January 1, 2026
+
+These Terms of Service govern access to and use of the Buildoc platform, website, services, systems, reports, recommendations, business launch infrastructure, and all associated operational services.
+
+By accessing Buildoc, users agree to comply with these terms, conditions, and applicable laws.
+
+Buildoc provides strategic business launch services including market research, startup validation, competitor analysis, branding consultation, website planning, launch infrastructure, optimization systems, and growth-focused business development support.
+
+Users agree not to misuse the platform, attempt unauthorized access, distribute malicious content, exploit operational systems, impersonate individuals, or engage in unlawful activities.
+
+Certain Buildoc services may require subscription payments, retainers, or project-based billing agreements. Users agree to complete payments according to agreed billing terms.
+
+All platform materials including branding systems, frameworks, reports, recommendations, designs, launch systems, intellectual property, strategic methodologies, graphics, and operational assets remain property of Buildoc unless otherwise agreed in writing.
+
+Buildoc provides strategic guidance and launch support but does not guarantee business success, profitability, investment outcomes, revenue growth, customer acquisition, or operational performance.
+
+Users remain solely responsible for all business decisions, implementation actions, investments, and operational activities resulting from Buildoc recommendations or services.
+
+Buildoc reserves the right to modify, suspend, reject, or discontinue services where necessary for operational, legal, security, or business reasons.
+
+Continued use of the platform constitutes acceptance of these Terms of Service.
+
+---
+
+## REFUND POLICY
+
+Due to the customized and strategic nature of Buildoc services, completed digital work and delivered strategic assets are generally non-refundable.
+
+Refund requests may be reviewed under limited circumstances including duplicate payments, billing errors, or failure to initiate agreed services.
+
+Completed market research, branding systems, business validation reports, launch strategies, consultation sessions, digital assets, and infrastructure deliverables are generally non-refundable once delivered or substantially completed.
+
+Users subscribed to recurring plans may cancel future billing cycles before the next scheduled renewal date.
+
+Unauthorized chargebacks may result in account suspension or termination.
+
+Buildoc reserves the right to determine refund eligibility based on operational progress, delivered work, allocated resources, and contractual obligations.
+
+---
+
+## DISCLAIMER
+
+Buildoc provides strategic recommendations, business launch intelligence, market insights, branding guidance, and startup development support intended for informational and operational purposes only.
+
+Buildoc does not guarantee:
+- revenue increases
+- business profitability
+- investment outcomes
+- successful launches
+- customer acquisition
+- operational performance
+- market success
+
+Business results depend on multiple external factors including execution quality, market conditions, competition, economic environments, operational management, and user decisions.
+
+Users acknowledge that all business activities involve inherent risk and that Buildoc recommendations do not guarantee future outcomes.
+
+---
+
+## COOKIE POLICY
+
+Buildoc uses cookies and analytics technologies to improve user experience, optimize platform functionality, monitor operational performance, analyze traffic behavior, and enhance security systems.
+
+Cookies may collect information related to browser activity, user sessions, interaction patterns, device information, and general platform usage analytics.
+
+Users may disable cookies through browser settings; however, certain platform features may become limited or unavailable.
+
+By continuing to use Buildoc, users consent to the use of cookies and related tracking technologies.
+
+---
+
+## DATA SECURITY POLICY
+
+Buildoc prioritizes operational security and infrastructure protection through modern digital security systems and cloud-based protections.
+
+Security measures may include encrypted HTTPS connections, restricted access systems, authentication layers, infrastructure monitoring, firewall protections, and secure cloud architecture.
+
+Although Buildoc implements reasonable security measures, no online platform can guarantee complete security or uninterrupted protection against all cyber threats.
+
+Users are encouraged to maintain strong passwords and secure account practices.
+
+---
+
+## ACCEPTABLE USE POLICY
+
+Users may not:
+- misuse platform systems
+- distribute malicious software
+- conduct fraudulent activity
+- exploit vulnerabilities
+- impersonate others
+- violate laws or regulations
+- abuse infrastructure services
+
+Buildoc reserves the right to suspend or terminate accounts that violate operational, legal, or security standards.
+
+---
+
+## CONTACT INFORMATION
+
+Business Name:
+Buildoc
+
+Website:
+https://buildoc.io
+
+Business Email:
+hello@buildoc.io
+
+Support Email:
+support@buildoc.io
+
+Privacy Contact:
+privacy@buildoc.io
+
+---
+
+## RECOMMENDED WEBSITE PAGES
+
+Main Pages:
+- Home
+- About
+- Solutions
+- Pricing
+- Contact
+- Dashboard
+- Login/Register
+
+Legal Pages:
+- Privacy Policy
+- Terms of Service
+- Refund Policy
+- Cookie Policy
+- Disclaimer
+
+Premium Pages:
+- Security
+- Insights/Blog
+- FAQ
+- Book a Call
+- Case Studies
+
+---
+
+## FOOTER STRUCTURE
+
+Footer Links:
+- Privacy Policy
+- Terms
+- Refund Policy
+- Cookie Policy
+- Disclaimer
+- Security
+- About
+- Contact
+- Pricing
+
+Footer Example:
+©️ 2026 Buildoc. All rights reserved.
