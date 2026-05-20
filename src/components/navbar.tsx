@@ -7,10 +7,12 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "Features", href: "#features" },
-  { name: "Process", href: "#process" },
-  { name: "Launch System", href: "#launch-system" },
-  { name: "Pricing", href: "#pricing" },
+  { name: "Home", href: "/" },
+  { name: "Features", href: "/#features" },
+  { name: "Process", href: "/#process" },
+  { name: "Launch System", href: "/#launch-system" },
+  { name: "Pricing", href: "/#pricing" },
+  { name: "About", href: "/about-us" },
 ];
 
 export default function Navbar() {
@@ -68,11 +70,11 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="flex items-center gap-4">
-          <Link href="#contact" className="hidden md:block text-sm font-medium text-muted hover:text-foreground transition-colors">
+          <Link href="/#contact" className="hidden md:block text-sm font-medium text-muted hover:text-foreground transition-colors">
             Contact
           </Link>
           <Link
-            href="#contact"
+            href="/#contact"
             className="relative overflow-hidden rounded-full bg-white/5 border border-white/10 px-6 py-2.5 text-sm font-medium text-foreground transition-all hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,107,53,0.3)] group"
           >
             <span className="relative z-10">Launch My Idea</span>

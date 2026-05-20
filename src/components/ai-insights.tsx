@@ -22,7 +22,7 @@ export default function AiInsights() {
         <div className="relative mx-auto max-w-3xl rounded-2xl border border-white/10 bg-[#0c0e1a] shadow-2xl overflow-hidden text-left font-mono">
           <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/[0.02]">
             <Terminal className="w-4 h-4 text-muted" />
-            <span className="text-xs text-muted">launchforge_ai_engine.exe</span>
+            <span className="text-xs text-muted">buildoc_ai_engine.exe</span>
           </div>
           
           <div className="p-6 md:p-8 space-y-6">

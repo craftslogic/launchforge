@@ -71,7 +71,7 @@ export default function CompetitorIntelligence() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-accent blur-md opacity-50 rounded-full animate-pulse" />
                   <div className="relative px-3 py-1 bg-accent rounded-full text-xs font-bold text-white tracking-wider flex items-center gap-1">
-                    <Zap className="w-3 h-3" /> LAUNCHFORGE
+                    <Zap className="w-3 h-3" /> BUILDOC
                   </div>
                 </div>
               </div>

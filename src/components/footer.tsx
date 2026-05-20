@@ -46,13 +46,23 @@ export default function Footer() {
           <div>
             <h4 className="font-heading font-medium text-foreground mb-6">Platform</h4>
             <ul className="space-y-4">
+              <li>
+                <Link href="/" className="text-muted hover:text-primary transition-colors text-sm">
+                  Home
+                </Link>
+              </li>
               {["Features", "Process", "Launch System", "Pricing"].map((item) => (
                 <li key={item}>
-                  <Link href={`#${item.toLowerCase().replace(" ", "-")}`} className="text-muted hover:text-primary transition-colors text-sm">
+                  <Link href={`/#${item.toLowerCase().replace(" ", "-")}`} className="text-muted hover:text-primary transition-colors text-sm">
                     {item}
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/about-us" className="text-muted hover:text-primary transition-colors text-sm">
+                  About
+                </Link>
+              </li>
             </ul>
           </div>
 
