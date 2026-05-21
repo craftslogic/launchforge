@@ -347,19 +347,6 @@ function PrimaryPlanCard({
           />
         )}
 
-        {/* Badge */}
-        {plan.badge && (
-          <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-            <motion.div
-              animate={{ boxShadow: ["0 0 15px rgba(255,107,53,0.4)", "0 0 30px rgba(255,107,53,0.7)", "0 0 15px rgba(255,107,53,0.4)"] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="bg-gradient-to-r from-primary to-accent text-white text-xs font-bold tracking-wider uppercase px-5 py-1.5 rounded-full flex items-center gap-1.5"
-            >
-              <Zap className="w-3 h-3" />
-              {plan.badge}
-            </motion.div>
-          </div>
-        )}
 
         {/* Icon + Header */}
         <div className="flex items-start justify-between mb-6 relative z-10">
@@ -442,10 +429,24 @@ function PrimaryPlanCard({
       transition={{ duration: 0.7, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: plan.highlight ? -8 : -6 }}
       className={cn(
-        "h-full",
+        "h-full relative",
         plan.highlight && "md:-mt-8 md:-mb-8 z-10"
       )}
     >
+      {/* Badge */}
+      {plan.badge && (
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-50">
+          <motion.div
+            animate={{ boxShadow: ["0 0 15px rgba(255,107,53,0.4)", "0 0 30px rgba(255,107,53,0.7)", "0 0 15px rgba(255,107,53,0.4)"] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="bg-gradient-to-r from-primary to-accent text-white text-xs font-bold tracking-wider uppercase px-5 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg"
+          >
+            <Zap className="w-3 h-3" />
+            {plan.badge}
+          </motion.div>
+        </div>
+      )}
+
       {plan.highlight ? (
         <GlowBorder>{cardContent}</GlowBorder>
       ) : (

@@ -54,21 +54,21 @@ export default function MarketResearch() {
         </div>
 
         {/* Cinematic Visuals instead of boring dashboards */}
-        <div className="relative h-[600px] w-full perspective-[1000px]">
+        <div className="relative h-[450px] md:h-[600px] w-full perspective-[1000px] mt-8 lg:mt-0">
           {/* Main Chart Card */}
           <motion.div 
             style={{ y: y1 }}
-            className="absolute top-10 right-10 w-[400px] h-[300px] rounded-2xl glass border border-white/10 p-6 flex flex-col z-20 shadow-2xl"
+            className="absolute top-0 md:top-10 right-0 md:right-10 w-[90%] md:w-[400px] h-[250px] md:h-[300px] rounded-2xl glass border border-white/10 p-5 md:p-6 flex flex-col z-20 shadow-2xl ml-auto"
           >
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center justify-between mb-6 md:mb-8">
               <div className="flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-blue-400" />
-                <span className="font-medium">Demand Trajectory</span>
+                <TrendingUp className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
+                <span className="font-medium text-sm md:text-base">Demand Trajectory</span>
               </div>
-              <span className="text-blue-400 text-sm font-bold">+124%</span>
+              <span className="text-blue-400 text-xs md:text-sm font-bold">+124%</span>
             </div>
             
-            <div className="flex-grow flex items-end gap-3 px-2">
+            <div className="flex-grow flex items-end gap-2 md:gap-3 px-1 md:px-2">
               {[40, 25, 45, 60, 40, 80, 100].map((h, i) => (
                 <motion.div 
                   key={i}
@@ -84,17 +84,17 @@ export default function MarketResearch() {
           {/* Floating Insight Card */}
           <motion.div 
             style={{ y: y2 }}
-            className="absolute bottom-20 left-0 w-[320px] rounded-2xl bg-[#1A1D2E] border border-blue-500/30 p-5 z-30 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+            className="absolute bottom-4 md:bottom-20 left-0 w-[95%] md:w-[320px] rounded-2xl bg-[#1A1D2E] border border-blue-500/30 p-4 md:p-5 z-30 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
           >
-            <div className="flex gap-4">
-              <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0">
-                <Activity className="w-5 h-5 text-blue-400" />
+            <div className="flex gap-3 md:gap-4">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0">
+                <Activity className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
               </div>
               <div>
-                <p className="text-sm text-foreground leading-relaxed">
+                <p className="text-xs md:text-sm text-foreground leading-relaxed">
                   "This market shows increasing demand with extremely low positioning quality from current competitors."
                 </p>
-                <p className="text-xs text-blue-400 mt-2 font-medium">AI Market Analysis • Real-time</p>
+                <p className="text-[10px] md:text-xs text-blue-400 mt-2 font-medium">AI Market Analysis • Real-time</p>
               </div>
             </div>
           </motion.div>
@@ -102,11 +102,11 @@ export default function MarketResearch() {
           {/* Background Element */}
           <motion.div 
             style={{ y: y3 }}
-            className="absolute top-40 left-10 w-[250px] h-[250px] rounded-full border border-white/5 flex items-center justify-center z-10"
+            className="absolute top-20 md:top-40 left-4 md:left-10 w-[180px] md:w-[250px] h-[180px] md:h-[250px] rounded-full border border-white/5 flex items-center justify-center z-10"
           >
-            <div className="w-[200px] h-[200px] rounded-full border border-white/10 flex items-center justify-center">
-              <div className="w-[150px] h-[150px] rounded-full border border-white/5 flex items-center justify-center">
-                <PieChart className="w-8 h-8 text-white/20" />
+            <div className="w-[140px] md:w-[200px] h-[140px] md:h-[200px] rounded-full border border-white/10 flex items-center justify-center">
+              <div className="w-[100px] md:w-[150px] h-[100px] md:h-[150px] rounded-full border border-white/5 flex items-center justify-center">
+                <PieChart className="w-6 h-6 md:w-8 md:h-8 text-white/20" />
               </div>
             </div>
           </motion.div>

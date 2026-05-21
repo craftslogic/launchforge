@@ -31,12 +31,12 @@ export default function WebsiteCreation() {
         </p>
       </div>
 
-      <div className="relative h-[60vh] md:h-[80vh] w-full max-w-[1400px] mx-auto perspective-[2000px] flex justify-center items-center">
+      <div className="relative h-[40vh] sm:h-[50vh] md:h-[80vh] w-full max-w-[1400px] mx-auto perspective-[2000px] flex justify-center items-center mt-12 md:mt-0">
         
         {/* Left Mobile Device */}
         <motion.div 
           style={{ y: yLeft }}
-          className="absolute left-[5%] md:left-[15%] z-10 w-[200px] md:w-[280px] h-[400px] md:h-[580px] rounded-[2rem] md:rounded-[3rem] border-[8px] border-[#1a1a1a] bg-background shadow-2xl overflow-hidden rotate-[-10deg] md:rotate-[-15deg] translate-y-20"
+          className="hidden md:block absolute left-[5%] md:left-[15%] z-10 w-[200px] md:w-[280px] h-[400px] md:h-[580px] rounded-[2rem] md:rounded-[3rem] border-[8px] border-[#1a1a1a] bg-background shadow-2xl overflow-hidden rotate-[-10deg] md:rotate-[-15deg] translate-y-20"
         >
           <div className="absolute top-0 inset-x-0 h-6 bg-[#1a1a1a] rounded-b-xl w-1/2 mx-auto z-20" /> {/* Notch */}
           <div className="w-full h-full bg-gradient-to-b from-background to-[#111] p-4 flex flex-col">
