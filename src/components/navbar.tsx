@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -17,6 +18,8 @@ const navLinks = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +28,13 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("/#") && pathname !== "/") {
+      e.preventDefault();
+      router.push(href);
+    }
+  };
 
   return (
     <motion.header
@@ -60,6 +70,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="text-sm font-medium text-muted hover:text-foreground transition-colors relative group"
             >
               {link.name}
@@ -70,11 +81,12 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="flex items-center gap-4">
-          <Link href="/#contact" className="hidden md:block text-sm font-medium text-muted hover:text-foreground transition-colors">
+          <Link href="/#contact" onClick={(e) => handleNavClick(e, "/#contact")} className="hidden md:block text-sm font-medium text-muted hover:text-foreground transition-colors">
             Contact
           </Link>
           <Link
             href="/#contact"
+            onClick={(e) => handleNavClick(e, "/#contact")}
             className="relative overflow-hidden rounded-full bg-white/5 border border-white/10 px-6 py-2.5 text-sm font-medium text-foreground transition-all hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,107,53,0.3)] group"
           >
             <span className="relative z-10">Launch My Idea</span>
