@@ -32,8 +32,15 @@ const InstagramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const YoutubeIcon = ({ className }: { className?: string }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path fillRule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.418-7.814.418-7.814.418s-6.255 0-7.814-.418a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.418-4.814a2.504 2.504 0 0 1 1.768-1.768C5.745 5 12 5 12 5s6.255 0 7.812.418ZM15.28 12l-4.58-2.62v5.24L15.28 12Z" clipRule="evenodd" />
+  </svg>
+);
+
 const iconMap: Record<string, React.FC<{ className?: string }>> = {
   twitter: TwitterIcon,
+  youtube: YoutubeIcon,
   linkedin: LinkedinIcon,
   github: GithubIcon,
   facebook: FacebookIcon,

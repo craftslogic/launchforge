@@ -30,9 +30,14 @@ export default function Navbar() {
   }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith("/#") && pathname !== "/") {
+    if (href.startsWith("/#")) {
       e.preventDefault();
-      router.push(href);
+      if (pathname === "/") {
+        const id = href.substring(2);
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        router.push(href);
+      }
     }
   };
 

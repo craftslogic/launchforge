@@ -23,10 +23,15 @@ export const socialLinks = {
     label: "Facebook",
     url: "https://facebook.com",
     enabled: false,
+  },  youtube: {
+    label: "YouTube",
+    url: "https://youtube.com/@buildocio?si=KqSr_wLOZeFC2_Bs",
+    enabled: true,
   },
-  instagram: {
+
+    instagram: {
     label: "Instagram",
-    url: "https://instagram.com",
-    enabled: false,
+    url: "https://www.instagram.com/buildoc.io?igsh=MXd0MDk3NWhrOXl1Zw%3D%3D&utm_source=qr",
+    enabled: true,
   },
 };
