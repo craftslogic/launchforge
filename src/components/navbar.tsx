@@ -35,6 +35,7 @@ export default function Navbar() {
       if (pathname === "/") {
         const id = href.substring(2);
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        history.pushState(null, "", href);
       } else {
         router.push(href);
       }
