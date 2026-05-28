@@ -6,15 +6,21 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote: "Buildoc didn't just build our app, they architected a brand that made investors take us seriously from day one. We raised $2M within a month of launch.",
-    author: "Sarah Jenkins",
+    author: "Elena Rostova",
     role: "Founder, Nova AI",
-    avatar: "S"
+    avatar: "/reviews/1.jpeg"
   },
   {
     quote: "The strategic positioning they provided was a game-changer. We were struggling to differentiate, and they gave us an identity that completely stood out.",
-    author: "David Chen",
+    author: "Markus Thorne",
     role: "CEO, NexaBlock",
-    avatar: "D"
+    avatar: "/reviews/2.jpeg"
+  },
+  {
+    quote: "A seamless experience from start to finish. The dashboard alone saved us hundreds of hours in operational overhead.",
+    author: "Sophia Wu",
+    role: "COO, FlowState",
+    avatar: "/reviews/3.jpeg"
   }
 ];
 
@@ -43,9 +49,7 @@ export default function Testimonials() {
                 "{t.quote}"
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center font-heading font-bold text-lg text-white">
-                  {t.avatar}
-                </div>
+                <img src={t.avatar} alt={t.author} className="w-12 h-12 rounded-full border-2 border-primary/20 object-cover" />
                 <div>
                   <h4 className="font-heading font-semibold text-foreground">{t.author}</h4>
                   <p className="text-sm text-muted">{t.role}</p>
