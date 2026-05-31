@@ -28,16 +28,16 @@ export default function ContactForm() {
 
     try {
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID",
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         {
+          to_email: process.env.NEXT_PUBLIC_EMAILJS_TO_EMAIL!,
           from_name: formData.name,
           reply_to: formData.email,
-          idea: formData.idea,
-          industry: formData.industry,
-          challenge: formData.challenge,
+          company: formData.industry,
+          message: `Idea: ${formData.idea}\n\nChallenge: ${formData.challenge}`,
         },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY"
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
       setStatus("success");
       setFormData({ name: "", email: "", idea: "", industry: "", challenge: "" });
