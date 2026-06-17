@@ -12,13 +12,13 @@ const testimonials = [
   },
   {
     quote: "The strategic positioning they provided was a game-changer. We were struggling to differentiate, and they gave us an identity that completely stood out.",
-    author: "Markus Thorne",
+    author: "Maria Thorne",
     role: "CEO, NexaBlock",
     avatar: "/reviews/2.jpeg"
   },
   {
     quote: "A seamless experience from start to finish. The dashboard alone saved us hundreds of hours in operational overhead.",
-    author: "Sophia Wu",
+    author: "Stephen Wu",
     role: "COO, FlowState",
     avatar: "/reviews/3.jpeg"
   }
