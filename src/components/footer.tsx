@@ -1,4 +1,4 @@
-import { Zap, MapPin, Phone, Mail } from "lucide-react";
+import { Zap, MapPin, Building2, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { socialLinks } from "@/lib/social";
@@ -60,16 +60,21 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6 w-fit">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#515BFF] to-[#8752FF] flex items-center justify-center shadow-[0_8px_24px_rgba(81,91,255,0.2)]">
-                <Zap className="w-6 h-6 text-white" strokeWidth={2.5} />
-              </div>
-              <span className="text-2xl font-bold tracking-tight text-white">Buildoc IO <span className="text-[#A47CF6] font-semibold">LLC</span></span>
+            <Link href="/" className="block mb-6 w-fit">
+              <Image src="/logo.png" alt="Buildoc" width={240} height={70} className="h-12 w-auto object-contain" />
             </Link>
             <p className="text-[#8A91A5] max-w-sm mb-8 text-sm md:text-base leading-relaxed">
               Intelligence-driven business audits and scalable growth systems for ambitious startups and modern businesses.
             </p>
             <div className="flex flex-col gap-4 mb-6">
+              <div className="flex items-start gap-4">
+                <div className="text-[#A47CF6] mt-0.5">
+                  <Building2 className="w-5 h-5" strokeWidth={1.8} />
+                </div>
+                <div className="text-[#B5BECF] text-base font-medium">
+                  BUILDOC IO <span className="text-[#A47CF6] font-semibold">LLC</span>
+                </div>
+              </div>
               <div className="flex items-start gap-4">
                 <div className="text-[#A47CF6] mt-0.5">
                   <MapPin className="w-5 h-5" strokeWidth={1.8} />
@@ -81,15 +86,9 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="text-[#A47CF6] mt-0.5">
-                  <Phone className="w-5 h-5" strokeWidth={1.8} />
-                </div>
-                <div className="text-[#B5BECF] text-base">+1 (351) 837-1858</div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="text-[#A47CF6] mt-0.5">
                   <Mail className="w-5 h-5" strokeWidth={1.8} />
                 </div>
-                <div className="text-[#B5BECF] text-base">hello@buildoc.io</div>
+                <div className="text-[#B5BECF] text-base">support@buildoc.io</div>
               </div>
             </div>
           </div>
